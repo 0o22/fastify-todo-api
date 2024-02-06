@@ -10,7 +10,7 @@ const fastify = require('fastify')({
 });
 
 fastify.register(cors, {
-  origin: '*',
+  origin: process.env.CLIENT_URL,
 });
 
 fastify.register(AutoLoad, {
